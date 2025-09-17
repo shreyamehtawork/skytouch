@@ -1,0 +1,143 @@
+/* Main background */
+.app-background {
+  background-image: url("./assets/bg1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 120vh;
+  width: 100%;
+  position: relative;
+}
+
+/* Founder-note container with semi-transparent overlay */
+.founder-note {
+  position: relative;
+  padding: 80px 20px;
+  height: 125vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.founder-note::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 253, 253, 0.408);
+  z-index: 0;
+}
+
+.founder-note > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Overlay card container */
+.bg-overlay {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  overflow: hidden;
+  color: black;
+}
+
+/* Headline */
+.headline {
+  text-align: center;
+  font-weight: 500;
+  font-size: 7.5rem;
+  letter-spacing: 3px;
+  margin-bottom: 1rem;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+/* New container for parallax GIFs */
+.parallax-gifs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Corner GIF styling */
+.corner-gif {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  pointer-events: none;
+  opacity: 2;
+  z-index: 2;
+}
+
+.footer {
+  background-color: white;
+  height: 150px;
+  padding-top: 20px;
+  margin-top: 50px;
+  position: relative;
+  z-index: 20;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.001); /* Added box shadow */
+}
+
+.corner-gif.top-left {
+  top: 15%;
+  left: 10%;
+}
+.corner-gif.top-right {
+  top: 10%;
+  right: 15%;
+}
+.corner-gif.bottom-left {
+  bottom: 10%;
+  left: 10%;
+}
+.corner-gif.bottom-right {
+  bottom: 1%;
+  right: 20%;
+}
+.navbar {
+  background-color: white;
+}
+
+.popup-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.popup-form h2 {
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.popup-form input,
+.popup-form textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.popup-form button {
+  border-radius: 6px;
+}

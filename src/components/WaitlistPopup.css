@@ -1,0 +1,164 @@
+/* General Overlay and Container */
+.waitlist-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.waitlist-container {
+  background: #ffffff;
+  max-width: 700px;
+  width: 100%;
+  padding: 3rem;
+  position: relative;
+  animation: fadeInUp 0.4s ease-in-out;
+  border: none;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Pseudo-element for the patterned border */
+.waitlist-container::before {
+  content: "";
+  position: absolute;
+  inset: -20px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><g fill="%23000000" fill-opacity="1"><rect x="0" y="0" width="20" height="20" fill="none"/><path d="M0 0h20v20H0V0zm2 2v16h16V2H2zm2 2h12v12H4V4zm2 2v8h8V6H6zm2 2h4v4H8V8z"/><path d="M0 0h1v19H0V0zm19 0h1v19h-1V0zM0 0h19v1H0V0zm0 19h19v1H0V19z" fill-rule="evenodd"/></g></svg>');
+  background-repeat: repeat;
+  z-index: -1;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border: none;
+  background: transparent;
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: #000;
+  transition: color 0.2s ease;
+  line-height: 1;
+  padding: 0;
+}
+.close-btn:hover {
+  color: #555;
+}
+
+/* Titles and Subtitles */
+.popup-title {
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: 900;
+  font-size: 2.8rem;
+  color: #000;
+  margin-bottom: 0.5rem;
+  letter-spacing: -1px;
+}
+
+.popup-subtitle {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+/* Form Styling */
+.form-group {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #000;
+  background-color: #fff;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 1rem;
+  color: #333;
+  box-shadow: none;
+  text-align: center;
+}
+
+.form-control::placeholder {
+  color: #666;
+  opacity: 1;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #000;
+  box-shadow: 0 0 0 0.1rem rgba(0, 0, 0, 0.25);
+}
+
+/* Checkbox Group - Removed custom styling for input[type="checkbox"] */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+/* Reset checkbox styling to browser defaults */
+.checkbox-group input[type="checkbox"] {
+  width: auto;
+  height: auto;
+  appearance: auto;
+  border: initial;
+  background: initial;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.checkbox-group label {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 0.95rem;
+  color: #333;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+/* Subscribe Button */
+.subscribe-btn {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background-color: #00e0b3;
+  color: #000;
+  border: none;
+  border-radius: 0;
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  letter-spacing: 0.5px;
+}
+
+.subscribe-btn:hover:not(:disabled) {
+  background-color: #00c49e;
+}
+
+.subscribe-btn:disabled {
+  background-color: #a0a0a0;
+  cursor: not-allowed;
+}
+
+/* Keyframe Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
