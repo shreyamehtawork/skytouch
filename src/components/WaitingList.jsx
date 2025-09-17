@@ -97,7 +97,7 @@ function WaitlistPopup({ show, onClose }) {
             </label>
           </div>
           <button type="submit" className="subscribe-btn" disabled={loading}>
-            {loading ? "Waiting...." : "Notify Me!"}
+            {loading ? "Adding to the Waiting List...." : "Notify Me!"}
           </button>
         </form>
       </div>
