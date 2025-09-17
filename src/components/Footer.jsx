@@ -7,7 +7,7 @@ const Footer = () => {
     <div className="text-center footer ">
       <div className=" copyright">© {year} by Skytouch Pvt.Ltd.</div>
 
-      <div className="cs-social mb-4">
+      <div className="cs-social mb-4 pt-3">
         <a
           href="#"
           aria-label="instagram"
