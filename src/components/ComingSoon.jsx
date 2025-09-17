@@ -21,7 +21,7 @@ function ComingSoon() {
   const gif4Y = useTransform(scrollY, [0, 500], [0, -150]);
 
   // New parallax for the main background image
-  const backgroundY = useTransform(scrollY, [0, 1000], [0, -1]);
+  const backgroundY = useTransform(scrollY, [0, 1000], [10, 2]);
 
   const [showPopup, setShowPopup] = useState(false);
   const [hasSubscribed, setHasSubscribed] = useState(false);

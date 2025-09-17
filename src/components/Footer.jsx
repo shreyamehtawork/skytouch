@@ -4,7 +4,7 @@ const Footer = () => {
   const d = new Date();
   let year = d.getFullYear();
   return (
-    <div className="text-center footer">
+    <div className="text-center footer ">
       <div className=" copyright">© {year} by Skytouch Pvt.Ltd.</div>
 
       <div className="cs-social mb-4">
