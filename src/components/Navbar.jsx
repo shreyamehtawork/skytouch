@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../assets/Skytouch.png";
+import "../App.css";
 
 function Navbar() {
   return (
